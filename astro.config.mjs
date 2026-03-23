@@ -22,7 +22,11 @@ export default defineConfig({
 			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/pubky' },
-				{ icon: 'x.com', label: 'X', href: 'https://x.com/paboracle' },
+				{ icon: 'x.com', label: 'X', href: 'https://x.com/getpubky' },
+				{ icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/channel/UCyNruUjynpzvQXNTxbJBLmg' },
+				{ icon: 'telegram', label: 'Telegram', href: 'https://t.me/pubkycore' },
+				{ icon: 'external', label: 'Medium', href: 'https://medium.com/pubky' },
+				{ icon: 'external', label: 'pubky.app', href: 'https://pubky.app/profile/ihaqcthsdbk751sxctk849bdr7yz7a934qen5gmpcbwcur49i97y/posts' },
 			],
 			sidebar: [
 				{ label: 'Home', slug: 'index' },
