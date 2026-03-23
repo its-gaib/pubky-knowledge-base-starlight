@@ -6,7 +6,7 @@ const isHomepage = Astro.url.pathname === "/" || Astro.url.pathname === "";
 ---
 
 <div class="hero-gradient-wrap">
-  {isHomepage && (
+  {isHomepage ? (
     <div class="install-hero">
       <InstallBlock />
       <div class="scroll-indicator">
@@ -15,8 +15,9 @@ const isHomepage = Astro.url.pathname === "/" || Astro.url.pathname === "";
         </svg>
       </div>
     </div>
+  ) : (
+    <Default><slot /></Default>
   )}
-  <Default><slot /></Default>
 </div>
 
 <style is:global>
@@ -25,10 +26,6 @@ const isHomepage = Astro.url.pathname === "/" || Astro.url.pathname === "";
     overflow: hidden;
   }
 
-  /* Hide the empty default Starlight hero on homepage */
-  .hero-gradient-wrap > .hero {
-    display: none;
-  }
 
   .hero-gradient-wrap::before {
     content: "";
