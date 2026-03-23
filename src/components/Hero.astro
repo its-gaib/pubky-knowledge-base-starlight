@@ -25,6 +25,11 @@ const isHomepage = Astro.url.pathname === "/" || Astro.url.pathname === "";
     overflow: hidden;
   }
 
+  /* Hide the empty default Starlight hero on homepage */
+  .hero-gradient-wrap > .hero {
+    display: none;
+  }
+
   .hero-gradient-wrap::before {
     content: "";
     position: absolute;
