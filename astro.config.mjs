@@ -7,7 +7,7 @@ import starlightClientMermaid from '@pasqal-io/starlight-client-mermaid';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Pubky Knowledge Base',
+			title: '',
 			logo: {
 				src: './src/assets/pubky-logo.webp',
 				alt: 'Pubky',
