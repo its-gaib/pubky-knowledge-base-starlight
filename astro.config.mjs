@@ -19,14 +19,18 @@ export default defineConfig({
 				ThemeProvider: './src/components/ThemeProvider.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',
 				Hero: './src/components/Hero.astro',
+				SocialIcons: './src/components/SocialIcons.astro',
 			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/pubky' },
 				{ icon: 'x.com', label: 'X', href: 'https://x.com/getpubky' },
 				{ icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/channel/UCyNruUjynpzvQXNTxbJBLmg' },
 				{ icon: 'telegram', label: 'Telegram', href: 'https://t.me/pubkycore' },
+				{ icon: 'discord', label: 'Discord', href: 'https://discord.gg/DxTBJXvJxn' },
 				{ icon: 'external', label: 'Medium', href: 'https://medium.com/pubky' },
 				{ icon: 'external', label: 'pubky.app', href: 'https://pubky.app/profile/ihaqcthsdbk751sxctk849bdr7yz7a934qen5gmpcbwcur49i97y/posts' },
+				{ icon: 'external', label: 'crates.io', href: 'https://crates.io/crates/pubky' },
+				{ icon: 'external', label: 'npm', href: 'https://www.npmjs.com/package/@synonymdev/pubky' },
 			],
 			sidebar: [
 				{ label: 'Home', slug: 'index' },
