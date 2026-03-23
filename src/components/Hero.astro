@@ -1,0 +1,33 @@
+---
+import Default from "@astrojs/starlight/components/Hero.astro";
+---
+
+<div class="hero-gradient-wrap">
+  <Default><slot /></Default>
+</div>
+
+<style>
+  .hero-gradient-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-gradient-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      radial-gradient(ellipse 60% 50% at 20% 60%, rgba(100, 60, 255, 0.08), transparent),
+      radial-gradient(ellipse 50% 40% at 80% 30%, rgba(0, 180, 255, 0.06), transparent),
+      radial-gradient(ellipse 40% 60% at 50% 80%, rgba(255, 255, 255, 0.03), transparent);
+    background-size: 28px 28px, 100% 100%, 100% 100%, 100% 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-gradient-wrap > :global(*) {
+    position: relative;
+    z-index: 1;
+  }
+</style>
