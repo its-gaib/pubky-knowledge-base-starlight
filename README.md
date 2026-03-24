@@ -1,35 +1,48 @@
-# Starlight Starter Kit: Basics
+# Pubky Knowledge Base
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+[![Documentation Status](https://img.shields.io/badge/docs-live-success)](https://pubky.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-```
-npm create astro@latest -- --template starlight
-```
+Welcome to the Pubky Knowledge base - we are excited to have you here!
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### [Access the Pubky Knowledge Base](https://docs.pubky.org/)
 
-## 🚀 Project Structure
+> **The current Knowledge base is a mix of reality, plans and visions.**
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+The Knowledge Base is a comprehensive resource that encompasses our vision for Pubky, along with detailed explanations of the architecture for both Pubky Core and Pubky App, as well as key concepts and practical guides.
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+## Contributing to Documentation
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+We kindly ask you to help us improve this documentation for a clearer, more accurate, and concise knowledge base.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+### Quick Fixes
 
-Static assets, like favicons, can be placed in the `public/` directory.
+For typos, broken links, or small improvements:
+1. Fork this repository
+2. Make your changes
+3. Submit a pull request
+
+### Larger Contributions
+
+For new pages or significant changes:
+1. Open an issue to discuss your plans first
+2. Follow the [[Contributing]] guide
+3. Test locally before submitting
+
+See our full **[[Contributing|Contributing Guide]]** for detailed instructions.
+
+## Related Resources
+
+- **Official Website**: [pubky.org](https://pubky.org/)
+- **Main Repository**: [github.com/pubky/pubky-core](https://github.com/pubky/pubky-core)
+- **Telegram**: [t.me/pubkycore](https://t.me/pubkycore)
+- **Live App**: [pubky.app](https://pubky.app)
+
+## License
+
+This documentation is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
 
 ## Commands
 
@@ -79,4 +92,4 @@ A GitHub Actions workflow (`.github/workflows/check-llms-freshness.yml`) runs on
 
 ### Why not automated in CI?
 
-The `llms.txt` generation uses Claude CLI, which runs under the Claude Max plan. This plan does not include API access, so it can’t run in CI without a separate API subscription. For now, generation runs locally. This can be migrated to a GitHub Action once API access is available.
+The `llms.txt` generation uses Claude CLI. Running it in CI (GitHub Action) requires a Claude API subscription. For now, generation runs locally and is pushed manually.
