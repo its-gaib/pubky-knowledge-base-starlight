@@ -23,14 +23,6 @@
 	--sl-color-hairline-shade: var(--sl-color-gray-5);
 }
 
-/* Success / error semantic colors */
-.sl-markdown-content .success {
-	color: #00ff5d;
-}
-.sl-markdown-content .error {
-	color: #ff0000;
-}
-
 /* ── Card hover effects ── */
 .card {
 	transition: transform 0.2s ease, box-shadow 0.2s ease,
@@ -58,10 +50,3 @@
 		0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
-/* Smooth transitions on interactive elements */
-a,
-button,
-.sl-link-card,
-.card {
-	transition: all 0.2s ease;
-}
