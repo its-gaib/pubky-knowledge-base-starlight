@@ -1,0 +1,51 @@
+name: Check llms.txt freshness
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-llms-freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if docs changed since last llms generation
+        run: |
+          # Verify generated files exist
+          for f in .llms-generation public/llms-full.txt public/llms.txt; do
+            if [ ! -f "$f" ]; then
+              echo "::error::$f not found. Run 'npm run generate-llms' locally and commit the result."
+              exit 1
+            fi
+          done
+
+          LLMS_COMMIT=$(tr -d '[:space:]' < .llms-generation)
+
+          # Verify the stored commit exists in history
+          if ! git cat-file -e "$LLMS_COMMIT" 2>/dev/null; then
+            echo "::error::Commit $LLMS_COMMIT from .llms-generation not found in git history."
+            exit 1
+          fi
+
+          # Check if any docs files changed between the stored commit and HEAD
+          CHANGED=$(git diff --name-only "$LLMS_COMMIT" HEAD -- src/content/docs/)
+
+          if [ -n "$CHANGED" ]; then
+            echo "::error::Documentation has changed since the last llms generation ($LLMS_COMMIT)."
+            echo ""
+            echo "Changed files:"
+            echo "$CHANGED"
+            echo ""
+            echo "Run 'npm run generate-llms' locally and commit the updated files:"
+            echo "  public/llms.txt"
+            echo "  public/llms-full.txt"
+            echo "  .llms-generation"
+            exit 1
+          fi
+
+          echo "llms files are up to date with docs."
