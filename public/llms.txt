@@ -4,97 +4,97 @@
 
 ## Quick Start
 
-- [TL;DR](https://pubky-knowledge-base-starlight.vercel.app/tldr/): 30-second overview of the Pubky decentralized web protocol
-- [Getting Started](https://pubky-knowledge-base-starlight.vercel.app/getting-started/): Complete guide for users and developers to start with Pubky
-- [Overview](https://pubky-knowledge-base-starlight.vercel.app/overview/): Welcome to the Pubky Knowledge Base
-- [Glossary](https://pubky-knowledge-base-starlight.vercel.app/glossary/): Quick reference for terms used throughout the Pubky ecosystem
-- [FAQ](https://pubky-knowledge-base-starlight.vercel.app/faq/): Frequently asked questions about Pubky Core
-- [The Vision of Pubky](https://pubky-knowledge-base-starlight.vercel.app/the-vision-of-pubky/): Decentralizing our future — the motivation behind Pubky
-- [Architecture](https://pubky-knowledge-base-starlight.vercel.app/architecture/): Comprehensive overview of the Pubky ecosystem architecture
-- [Comparisons](https://pubky-knowledge-base-starlight.vercel.app/comparisons/): How Pubky differs from other decentralized and federated protocols
+- [TL;DR](https://docs.pubky.org/tldr.md): 30-second overview of the Pubky decentralized web protocol
+- [Getting Started](https://docs.pubky.org/getting-started.md): Complete guide for users and developers to start with Pubky
+- [Overview](https://docs.pubky.org/overview.md): Welcome to the Pubky Knowledge Base
+- [Glossary](https://docs.pubky.org/glossary.md): Quick reference for terms used throughout the Pubky ecosystem
+- [FAQ](https://docs.pubky.org/faq.md): Frequently asked questions about Pubky Core
+- [The Vision of Pubky](https://docs.pubky.org/the-vision-of-pubky.md): Decentralizing our future — the motivation behind Pubky
+- [Architecture](https://docs.pubky.org/architecture.md): Comprehensive overview of the Pubky ecosystem architecture
+- [Comparisons](https://docs.pubky.org/comparisons.md): How Pubky differs from other decentralized and federated protocols
 
 ## Key Concepts
 
-- [Censorship](https://pubky-knowledge-base-starlight.vercel.app/explore/concepts/censorship/): Why centralized platforms fail and how Pubky enables censorship resistance
-- [Credible Exit](https://pubky-knowledge-base-starlight.vercel.app/explore/concepts/credible-exit/): Ability to leave a platform without losing data, identity, or connections
-- [Semantic Social Graph](https://pubky-knowledge-base-starlight.vercel.app/explore/concepts/semantic-social-graph/): Tagged relationships and user-controlled filtering for personalized feeds
+- [Censorship](https://docs.pubky.org/explore/concepts/censorship.md): Why centralized platforms fail and how Pubky enables censorship resistance
+- [Credible Exit](https://docs.pubky.org/explore/concepts/credible-exit.md): Ability to leave a platform without losing data, identity, or connections
+- [Semantic Social Graph](https://docs.pubky.org/explore/concepts/semantic-social-graph.md): Tagged relationships and user-controlled filtering for personalized feeds
 
 ## Pubky Core
 
-- [Introduction](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/introduction/): Open protocol for per-public-key backends for censorship-resistant web applications
-- [ELI5](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/eli5/): Explaining Pubky Core like you're 5 years old
-- [API Reference](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/api/): RESTful HTTP API specification for storing and retrieving data on Homeservers
-- [SDK](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/sdk/): Client libraries for building applications on Pubky Core across multiple languages
-- [Homeserver](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/homeserver/): Independent data stores enabling censorship resistance and data portability
-- [Authentication](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/authentication/): Decentralized authentication where users control their own cryptographic keys
-- [Security Model](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/security-model/): Security model, threat landscape, and trust assumptions in Pubky Core
+- [Introduction](https://docs.pubky.org/explore/pubkycore/introduction.md): Open protocol for per-public-key backends for censorship-resistant web applications
+- [ELI5](https://docs.pubky.org/explore/pubkycore/eli5.md): Explaining Pubky Core like you're 5 years old
+- [API Reference](https://docs.pubky.org/explore/pubkycore/api.md): RESTful HTTP API specification for storing and retrieving data on Homeservers
+- [SDK](https://docs.pubky.org/explore/pubkycore/sdk.md): Client libraries for building applications on Pubky Core across multiple languages
+- [Homeserver](https://docs.pubky.org/explore/pubkycore/homeserver.md): Independent data stores enabling censorship resistance and data portability
+- [Authentication](https://docs.pubky.org/explore/pubkycore/authentication.md): Decentralized authentication where users control their own cryptographic keys
+- [Security Model](https://docs.pubky.org/explore/pubkycore/security-model.md): Security model, threat landscape, and trust assumptions in Pubky Core
 
 ## PKARR
 
-- [Introduction](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/pkarr/introduction/): Public-Key Addressable Resource Records for decentralized identity
-- [Architecture](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/pkarr/architecture/): In-depth look at PKARR components, data formats, and interactions
-- [Why PKARR?](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/pkarr/why-pkarr/): Motivation behind PKARR addressing distributed semantics, databases, and discovery
-- [Getting Started](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/pkarr/getting-started/): Guide to publishing and resolving resource records using PKARR
-- [Expectations](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/pkarr/expectations/): Understanding the expectations and limitations of PKARR
-- [ELI5](https://pubky-knowledge-base-starlight.vercel.app/explore/pubkycore/pkarr/eli5/): Simple explanation of PKARR with Mainline DHT
+- [Introduction](https://docs.pubky.org/explore/pubkycore/pkarr/introduction.md): Public-Key Addressable Resource Records for decentralized identity
+- [Architecture](https://docs.pubky.org/explore/pubkycore/pkarr/architecture.md): In-depth look at PKARR components, data formats, and interactions
+- [Why PKARR?](https://docs.pubky.org/explore/pubkycore/pkarr/why-pkarr.md): Motivation behind PKARR addressing distributed semantics, databases, and discovery
+- [Getting Started](https://docs.pubky.org/explore/pubkycore/pkarr/getting-started.md): Guide to publishing and resolving resource records using PKARR
+- [Expectations](https://docs.pubky.org/explore/pubkycore/pkarr/expectations.md): Understanding the expectations and limitations of PKARR
+- [ELI5](https://docs.pubky.org/explore/pubkycore/pkarr/eli5.md): Simple explanation of PKARR with Mainline DHT
 
 ## Pubky Apps
 
-- [Introduction](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/introduction/): Overview of the Pubky social application layer
-- [ELI5](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/eli5/): Simple explanation of Pubky App
-- [App Specs](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/app-specs/): Shared data model specifications for the Pubky social app ecosystem
+- [Introduction](https://docs.pubky.org/explore/pubky-apps/introduction.md): Overview of the Pubky social application layer
+- [ELI5](https://docs.pubky.org/explore/pubky-apps/eli5.md): Simple explanation of Pubky App
+- [App Specs](https://docs.pubky.org/explore/pubky-apps/app-specs.md): Shared data model specifications for the Pubky social app ecosystem
 
 ## App Architectures
 
-- [Introduction](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/app-architectures/introduction/): Overview of application architecture patterns built on Pubky Core
-- [Client-Homeserver](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/app-architectures/client-homeserver/): Simple direct connection between client application and a single Homeserver
-- [Global Aggregators](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/app-architectures/global-aggregators/): Multiple Homeservers feeding data into a central aggregator service
-- [Custom Backend](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/app-architectures/custom-backend/): Advanced architecture with custom aggregation, inference, and specialized APIs
+- [Introduction](https://docs.pubky.org/explore/pubky-apps/app-architectures/introduction.md): Overview of application architecture patterns built on Pubky Core
+- [Client-Homeserver](https://docs.pubky.org/explore/pubky-apps/app-architectures/client-homeserver.md): Simple direct connection between client application and a single Homeserver
+- [Global Aggregators](https://docs.pubky.org/explore/pubky-apps/app-architectures/global-aggregators.md): Multiple Homeservers feeding data into a central aggregator service
+- [Custom Backend](https://docs.pubky.org/explore/pubky-apps/app-architectures/custom-backend.md): Advanced architecture with custom aggregation, inference, and specialized APIs
 
 ## Indexing and Aggregation
 
-- [Introduction](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/indexing-and-aggregation/introduction/): Backend responsible for collecting and organizing data from Homeservers
-- [Aggregator](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/indexing-and-aggregation/aggregator/): Specialized reducers that scan and collect data from Homeservers
-- [Indexer](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/indexing-and-aggregation/indexer/): Normalizes and transforms aggregated data into a unified searchable view
-- [Pubky Nexus](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/indexing-and-aggregation/pubky-nexus/): Production-grade indexing and aggregation service powering social features
-- [Web Server](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/indexing-and-aggregation/web-server/): Backend services for data feeds, search, and UI configurations
+- [Introduction](https://docs.pubky.org/explore/pubky-apps/indexing-and-aggregation/introduction.md): Backend responsible for collecting and organizing data from Homeservers
+- [Aggregator](https://docs.pubky.org/explore/pubky-apps/indexing-and-aggregation/aggregator.md): Specialized reducers that scan and collect data from Homeservers
+- [Indexer](https://docs.pubky.org/explore/pubky-apps/indexing-and-aggregation/indexer.md): Normalizes and transforms aggregated data into a unified searchable view
+- [Pubky Nexus](https://docs.pubky.org/explore/pubky-apps/indexing-and-aggregation/pubky-nexus.md): Production-grade indexing and aggregation service powering social features
+- [Web Server](https://docs.pubky.org/explore/pubky-apps/indexing-and-aggregation/web-server.md): Backend services for data feeds, search, and UI configurations
 
 ## Reference App
 
-- [Pubky Client](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/introduction/): User-facing progressive web app for the Pubky social network
-- [pubky.app](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/pubky-app/): Web portal — a publisher and social feed for the decentralized web
-- [Bookmarks](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/bookmarks/): Privately save posts for later reference
-- [Layouts](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/layouts/): Multiple customizable UI layouts for column, grid, and list feeds
-- [Notifications](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/notifications/): Event tracking and activity alerts for user interactions
-- [Perspectives](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/perspectives/): Custom-filtered views with saved tags, weights, users, and layout settings
-- [Posts](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/posts/): Core content published by users on the platform
-- [Profiles](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/profiles/): User personal pages representing a public key identity
-- [Search](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/search/): Traditional search capabilities complementing tags and filters
-- [Tags](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/tags/): Free-text labels powering the Semantic Social Graph for discovery and filtering
-- [Trends](https://pubky-knowledge-base-starlight.vercel.app/explore/pubky-apps/reference-app/features/trends/): Statistical views and leaderboards of trending posts, tags, and users
+- [Pubky Client](https://docs.pubky.org/explore/pubky-apps/reference-app/introduction.md): User-facing progressive web app for the Pubky social network
+- [pubky.app](https://docs.pubky.org/explore/pubky-apps/reference-app/pubky-app.md): Web portal — a publisher and social feed for the decentralized web
+- [Bookmarks](https://docs.pubky.org/explore/pubky-apps/reference-app/features/bookmarks.md): Privately save posts for later reference
+- [Layouts](https://docs.pubky.org/explore/pubky-apps/reference-app/features/layouts.md): Multiple customizable UI layouts for column, grid, and list feeds
+- [Notifications](https://docs.pubky.org/explore/pubky-apps/reference-app/features/notifications.md): Event tracking and activity alerts for user interactions
+- [Perspectives](https://docs.pubky.org/explore/pubky-apps/reference-app/features/perspectives.md): Custom-filtered views with saved tags, weights, users, and layout settings
+- [Posts](https://docs.pubky.org/explore/pubky-apps/reference-app/features/posts.md): Core content published by users on the platform
+- [Profiles](https://docs.pubky.org/explore/pubky-apps/reference-app/features/profiles.md): User personal pages representing a public key identity
+- [Search](https://docs.pubky.org/explore/pubky-apps/reference-app/features/search.md): Traditional search capabilities complementing tags and filters
+- [Tags](https://docs.pubky.org/explore/pubky-apps/reference-app/features/tags.md): Free-text labels powering the Semantic Social Graph for discovery and filtering
+- [Trends](https://docs.pubky.org/explore/pubky-apps/reference-app/features/trends.md): Statistical views and leaderboards of trending posts, tags, and users
 
 ## Technologies
 
-- [Key Pairs](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/key-pair/): Cryptographic key pairs for identity and signing in Pubky
-- [Mainline DHT](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/mainline-dht/): Distributed Hash Table used in BitTorrent with 10M+ nodes for decentralized discovery
-- [DHT](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/dht/): Decentralized key-value store for efficient distributed data retrieval
-- [DNS](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/dns/): Domain Name System translating human-readable names to IP addresses
-- [DNS over HTTPS](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/doh/): Security protocol encrypting DNS queries to prevent eavesdropping
-- [HTTPS](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/https/): HTTP extension encrypting communication using TLS
-- [HTTP Relay](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/http-relay/): Relay service for forwarding encrypted AuthTokens during authentication flows
-- [PKDNS](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/pkdns/): DNS server resolving PKARR public-key domains via Mainline DHT
-- [Pubky Ring](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/pubky-ring/): Mobile identity manager for key management and app authorization
-- [Homegate](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/homegate/): Homeserver signup gatekeeping via SMS and Lightning payment verification
-- [Pubky CLI](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/pubky-cli/): Command-line tool for interacting with Pubky Homeservers
-- [Pubky Docker](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/pubky-docker/): Docker Compose orchestration for a full local Pubky development environment
-- [Pubky Explorer](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/pubky-explorer/): Web-based file browser for exploring public data on Homeservers
-- [Pubky Backup](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/pubky-backup/): Desktop backup application for maintaining local copies of published data
-- [Pubky Moderation](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/pubky-moderation/): Content moderation service protecting homeserver operators and users
-- [Pubky Noise](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/pubky-noise/): Encrypted communication protocol (work in progress)
-- [Paykit](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/paykit/): Decentralized payment protocol (work in progress)
-- [Jeb](https://pubky-knowledge-base-starlight.vercel.app/explore/technologies/jeb-pubky-ai-bot/): AI-powered bot for intelligent summaries and fact-checking on Pubky
+- [Key Pairs](https://docs.pubky.org/explore/technologies/key-pair.md): Cryptographic key pairs for identity and signing in Pubky
+- [Mainline DHT](https://docs.pubky.org/explore/technologies/mainline-dht.md): Distributed Hash Table used in BitTorrent with 10M+ nodes for decentralized discovery
+- [DHT](https://docs.pubky.org/explore/technologies/dht.md): Decentralized key-value store for efficient distributed data retrieval
+- [DNS](https://docs.pubky.org/explore/technologies/dns.md): Domain Name System translating human-readable names to IP addresses
+- [DNS over HTTPS](https://docs.pubky.org/explore/technologies/doh.md): Security protocol encrypting DNS queries to prevent eavesdropping
+- [HTTPS](https://docs.pubky.org/explore/technologies/https.md): HTTP extension encrypting communication using TLS
+- [HTTP Relay](https://docs.pubky.org/explore/technologies/http-relay.md): Relay service for forwarding encrypted AuthTokens during authentication flows
+- [PKDNS](https://docs.pubky.org/explore/technologies/pkdns.md): DNS server resolving PKARR public-key domains via Mainline DHT
+- [Pubky Ring](https://docs.pubky.org/explore/technologies/pubky-ring.md): Mobile identity manager for key management and app authorization
+- [Homegate](https://docs.pubky.org/explore/technologies/homegate.md): Homeserver signup gatekeeping via SMS and Lightning payment verification
+- [Pubky CLI](https://docs.pubky.org/explore/technologies/pubky-cli.md): Command-line tool for interacting with Pubky Homeservers
+- [Pubky Docker](https://docs.pubky.org/explore/technologies/pubky-docker.md): Docker Compose orchestration for a full local Pubky development environment
+- [Pubky Explorer](https://docs.pubky.org/explore/technologies/pubky-explorer.md): Web-based file browser for exploring public data on Homeservers
+- [Pubky Backup](https://docs.pubky.org/explore/technologies/pubky-backup.md): Desktop backup application for maintaining local copies of published data
+- [Pubky Moderation](https://docs.pubky.org/explore/technologies/pubky-moderation.md): Content moderation service protecting homeserver operators and users
+- [Pubky Noise](https://docs.pubky.org/explore/technologies/pubky-noise.md): Encrypted communication protocol (work in progress)
+- [Paykit](https://docs.pubky.org/explore/technologies/paykit.md): Decentralized payment protocol (work in progress)
+- [Jeb](https://docs.pubky.org/explore/technologies/jeb-pubky-ai-bot.md): AI-powered bot for intelligent summaries and fact-checking on Pubky
 
 ## Community
 
-- [Contributing](https://pubky-knowledge-base-starlight.vercel.app/contributing/): Guide to contributing to Pubky
-- [Troubleshooting](https://pubky-knowledge-base-starlight.vercel.app/troubleshooting/): Common issues and solutions when working with Pubky
+- [Contributing](https://docs.pubky.org/contributing.md): Guide to contributing to Pubky
+- [Troubleshooting](https://docs.pubky.org/troubleshooting.md): Common issues and solutions when working with Pubky

@@ -241,7 +241,7 @@ for (const relPath of pages) {
 
   const fmTitle = extractTitle(raw) || relPath;
   const slug = fileToSlug(relPath);
-  const url = slug ? `${SITE_URL}/${slug}/` : `${SITE_URL}/`;
+  const url = slug ? `${SITE_URL}/${slug}.md` : `${SITE_URL}/`;
 
   let body = stripFrontmatter(raw);
   body = stripMdxComponents(body);
