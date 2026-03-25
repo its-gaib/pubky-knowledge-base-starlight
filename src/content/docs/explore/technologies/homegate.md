@@ -2,8 +2,6 @@
 title: "Homegate: Homeserver Signup Gatekeeping Service"
 ---
 
-# Homegate: Homeserver Signup Gatekeeping Service
-
 **Homegate** is a backend service that manages and controls signups for [Pubky Homeservers](/explore/pubkycore/homeserver/). It provides verification mechanisms to prevent spam and abuse while preserving user privacy, implementing both SMS verification and Lightning Network payment verification for Homeserver access.
 
 ## Overview

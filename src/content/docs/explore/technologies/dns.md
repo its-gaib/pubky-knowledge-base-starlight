@@ -2,8 +2,6 @@
 title: "Domain Name System (DNS)"
 ---
 
-# Domain Name System (DNS)
-
 The Domain Name System (DNS) is a hierarchical and distributed naming system that translates human-readable domain names (e.g., `www.example.com`) into IP addresses (e.g., `192.0.2.1`) that computers use to identify each other on the network. This process simplifies internet navigation by allowing users to access websites using memorable names instead of numerical addresses.
 
 ## How DNS Works

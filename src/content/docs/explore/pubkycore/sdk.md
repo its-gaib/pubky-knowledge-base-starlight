@@ -2,8 +2,6 @@
 title: "Pubky SDK: Client Libraries for Decentralized Applications"
 ---
 
-# Pubky SDK: Client Libraries for Decentralized Applications
-
 The Pubky SDK provides client libraries for building applications on [Pubky Core](/explore/pubkycore/introduction/). Available in multiple languages with consistent APIs across platforms.
 
 ## Supported Platforms

@@ -2,8 +2,6 @@
 title: "Pubky: 30-Second Overview"
 ---
 
-# Pubky: 30-Second Overview
-
 **Pubky is a decentralized web protocol that puts you in control of your identity and data.**
 
 ## What It Is

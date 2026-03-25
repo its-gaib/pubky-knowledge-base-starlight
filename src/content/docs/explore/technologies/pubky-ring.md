@@ -2,7 +2,7 @@
 title: "Pubky Ring"
 ---
 
-# Pubky Ring: Identity Manager for Pubky
+# Identity Manager for Pubky
 
 > **Your keychain for the Pubky ecosystem. Manage your pubkys, authorize services, and stay in control—no accounts, no passwords.**
 

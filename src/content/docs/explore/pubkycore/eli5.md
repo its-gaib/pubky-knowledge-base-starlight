@@ -2,8 +2,6 @@
 title: "Explaining Pubky Core Like You're 5 Years Old"
 ---
 
-# Explaining Pubky Core Like You're 5 Years Old
-
 Imagine you have a special toy castle that you built, and you want your friends to come and play with it. Maybe you set up your castle in your backyard, or in the park, or at your grandma's house. You tell your friends where it is so they can come play. 
 
 Now, suppose you chose the park, but it is closed, or someone says you can't keep your castle there anymore. No worries!

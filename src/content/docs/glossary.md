@@ -2,8 +2,6 @@
 title: "Glossary"
 ---
 
-# Glossary
-
 Quick reference for terms used throughout the Pubky ecosystem.
 
 ---

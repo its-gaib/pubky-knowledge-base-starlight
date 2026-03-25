@@ -2,8 +2,6 @@
 title: "Paykit: Decentralized Payment Protocol (Work in Progress)"
 ---
 
-# Paykit: Decentralized Payment Protocol (Work in Progress)
-
 > ⚠️ **NOTE**: Paykit is currently under active development and is **NOT production-ready**. The protocol and implementation are subject to significant changes. Integration work in Bitkit serves as a testbed for protocol development.
 
 ## Overview

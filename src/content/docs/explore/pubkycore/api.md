@@ -2,8 +2,6 @@
 title: "Pubky Core API Reference"
 ---
 
-# Pubky Core API Reference
-
 The [Pubky Core](/explore/pubkycore/introduction/) protocol defines a RESTful HTTP API for storing and retrieving data on [Homeservers](/explore/pubkycore/homeserver/). This document describes the complete API specification.
 
 ## Base URL

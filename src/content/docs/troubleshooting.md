@@ -2,8 +2,6 @@
 title: "Troubleshooting Guide"
 ---
 
-# Troubleshooting Guide
-
 Common issues and solutions when working with Pubky.
 
 ---

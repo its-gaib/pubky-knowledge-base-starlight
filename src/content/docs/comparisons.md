@@ -2,8 +2,6 @@
 title: "How Pubky Compares to Other Protocols"
 ---
 
-# How Pubky Compares to Other Protocols
-
 Understanding how Pubky differs from other decentralized and federated protocols.
 
 ---

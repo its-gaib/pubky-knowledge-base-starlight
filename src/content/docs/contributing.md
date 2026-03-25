@@ -2,8 +2,6 @@
 title: "Contributing to Pubky"
 ---
 
-# Contributing to Pubky
-
 Thank you for your interest in contributing to Pubky! This guide will help you get started.
 
 ---

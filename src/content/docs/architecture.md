@@ -2,8 +2,6 @@
 title: "Pubky Architecture Overview"
 ---
 
-# Pubky Architecture Overview
-
 This page provides a comprehensive overview of the Pubky ecosystem architecture, showing how all components work together to enable decentralized, censorship-resistant applications.
 
 ---

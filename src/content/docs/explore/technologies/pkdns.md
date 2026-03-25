@@ -2,8 +2,6 @@
 title: "PKDNS: Public-Key DNS Server"
 ---
 
-# PKDNS: Public-Key DNS Server
-
 **PKDNS** is a DNS server that enables self-sovereign and censorship-resistant domain names by resolving [PKARR](/explore/pubkycore/pkarr/introduction/) (Public Key Addressable Resource Records) hosted on the [Mainline DHT](/explore/technologies/mainline-dht/). It bridges the gap between traditional DNS infrastructure and public key-based domains, allowing anyone to access the decentralized web using standard DNS protocols.
 
 ## Overview

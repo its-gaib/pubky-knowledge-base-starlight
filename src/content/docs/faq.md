@@ -2,8 +2,6 @@
 title: "Pubky Core - Frequently Asked Questions"
 ---
 
-# Pubky Core - Frequently Asked Questions
-
 ## Overview & Philosophy
 
 **Q1. What is Pubky, and why was it developed?**  

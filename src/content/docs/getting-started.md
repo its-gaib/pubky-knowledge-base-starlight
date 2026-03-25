@@ -2,8 +2,6 @@
 title: "Getting Started"
 ---
 
-# Getting Started with Pubky
-
 Welcome to Pubky! This guide will help you get started whether you're a user looking to try decentralized social media or a developer building on the Pubky protocol.
 
 ```mermaid
