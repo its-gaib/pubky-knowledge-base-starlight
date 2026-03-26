@@ -575,7 +575,7 @@ cargo test
 
 ### Event Streaming
 
-The SDK provides a builder API for subscribing to real-time homeserver events via SSE. See [API#Event Streaming](/explore/pubkycore/api/#event-streaming) for the underlying HTTP endpoint.
+The SDK provides a builder API for subscribing to real-time homeserver events via SSE. See [Event Streaming](/explore/pubkycore/api/#event-streaming) for the underlying HTTP endpoint.
 
 **Rust — Single user:**
 ```rust

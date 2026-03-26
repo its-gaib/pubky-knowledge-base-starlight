@@ -355,7 +355,7 @@ Get user information.
 }
 ```
 
-See [Homeserver#Admin API](/explore/pubkycore/homeserver/#admin-api) for complete admin documentation.
+See [Admin API](/explore/pubkycore/homeserver/#admin-api) for complete admin documentation.
 
 ## Metrics Endpoint
 
