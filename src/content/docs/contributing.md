@@ -117,15 +117,6 @@ const example = "like this";
 5. **Test thoroughly**: Ensure tests pass
 6. **Submit PR**: Include description and link to issue
 
-### Project-Specific Guidelines
-
-Each repository has its own CONTRIBUTING.md:
-
-- **Pubky Core**: [github.com/pubky/pubky-core](https://github.com/pubky/pubky-core)
-- **Pubky Nexus**: [github.com/pubky/pubky-nexus](https://github.com/pubky/pubky-nexus)
-- **Pubky Ring**: [github.com/pubky/pubky-ring](https://github.com/pubky/pubky-ring)
-- **Pubky CLI**: [github.com/pubky/pubky-cli](https://github.com/pubky/pubky-cli)
-
 ### Code Quality Standards
 
 **All code contributions should:**
