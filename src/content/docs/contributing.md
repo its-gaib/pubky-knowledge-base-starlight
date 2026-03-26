@@ -121,10 +121,10 @@ const example = "like this";
 
 Each repository has its own CONTRIBUTING.md:
 
-- **Pubky Core**: [github.com/pubky/pubky-core/blob/main/CONTRIBUTING.md](https://github.com/pubky/pubky-core/blob/main/CONTRIBUTING.md)
-- **Pubky Nexus**: [github.com/pubky/pubky-nexus/blob/main/CONTRIBUTING.md](https://github.com/pubky/pubky-nexus/blob/main/CONTRIBUTING.md)
-- **Pubky Ring**: [github.com/pubky/pubky-ring/blob/main/CONTRIBUTING.md](https://github.com/pubky/pubky-ring/blob/main/CONTRIBUTING.md)
-- **Pubky CLI**: [github.com/pubky/pubky-cli/blob/main/CONTRIBUTING.md](https://github.com/pubky/pubky-cli/blob/main/CONTRIBUTING.md)
+- **Pubky Core**: [github.com/pubky/pubky-core](https://github.com/pubky/pubky-core)
+- **Pubky Nexus**: [github.com/pubky/pubky-nexus](https://github.com/pubky/pubky-nexus)
+- **Pubky Ring**: [github.com/pubky/pubky-ring](https://github.com/pubky/pubky-ring)
+- **Pubky CLI**: [github.com/pubky/pubky-cli](https://github.com/pubky/pubky-cli)
 
 ### Code Quality Standards
 
@@ -358,7 +358,7 @@ Building a Pubky App-compatible client?
 
 1. **Use pubky-app-specs**: [npm package](https://www.npmjs.com/package/pubky-app-specs)
 2. **Follow the spec**: Ensure interoperability
-3. **Test against Nexus**: Use [nexus.pubky.app](https://nexus.pubky.app)
+3. **Test against Nexus**: Use [nexus.pubky.app](https://nexus.pubky.app/swagger-ui/)
 4. **Share your work**: Let the community know!
 
 ### Running Infrastructure
