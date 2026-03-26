@@ -2,9 +2,11 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightClientMermaid from '@pasqal-io/starlight-client-mermaid';
+import starlightLlmsTxt from 'starlight-llms-txt';
 
 // https://astro.build/config
 export default defineConfig({
+	site: process.env.SITE_URL || 'https://docs.pubky.org',
 	integrations: [
 		starlight({
 			title: '',
@@ -13,7 +15,54 @@ export default defineConfig({
 				alt: 'Pubky',
 			},
 			favicon: '/favicon.svg',
-			plugins: [starlightClientMermaid()],
+			plugins: [
+				starlightClientMermaid(),
+				starlightLlmsTxt({
+					projectName: 'Pubky Documentation',
+					description:
+						'Pubky is an open protocol for key-based, censorship-resistant web applications. ' +
+						'It provides identity via public keys, data storage on homeservers, and discovery ' +
+						'via the Mainline DHT — all over simple HTTP/REST APIs.',
+					exclude: [
+						'index',
+						'overview',
+						'comparisons',
+						'faq',
+						'troubleshooting',
+						'contributing',
+						'getting-started',
+						'the-vision-of-pubky',
+						'glossary',
+						'tldr',
+						'explore/technologies/jeb-pubky-ai-bot',
+						'explore/technologies/https',
+						'explore/technologies/key-pair',
+						'explore/technologies/dht',
+						'explore/technologies/dns',
+						'explore/technologies/doh',
+						'explore/technologies/pubky-explorer',
+						'explore/technologies/pubky-ring',
+						'explore/pubkycore/eli5',
+						'explore/pubkycore/pkarr/eli5',
+						'explore/pubkycore/pkarr/getting-started',
+						'explore/pubkycore/pkarr/why-pkarr',
+						'explore/pubkycore/pkarr/expectations',
+						'explore/pubky-apps/eli5',
+						'explore/pubky-apps/app-architectures/introduction',
+						'explore/pubky-apps/app-architectures/client-homeserver',
+						'explore/pubky-apps/app-architectures/global-aggregators',
+						'explore/pubky-apps/indexing-and-aggregation/introduction',
+						'explore/pubky-apps/indexing-and-aggregation/aggregator',
+						'explore/pubky-apps/indexing-and-aggregation/indexer',
+						'explore/pubky-apps/indexing-and-aggregation/web-server',
+						'explore/pubky-apps/reference-app/introduction',
+						'explore/pubky-apps/reference-app/pubky-app',
+						'explore/pubky-apps/reference-app/features/**',
+						'explore/concepts/censorship',
+						'explore/concepts/credible-exit',
+					],
+				}),
+			],
 			customCss: ['./src/styles/custom.css'],
 			components: {
 				ThemeProvider: './src/components/ThemeProvider.astro',

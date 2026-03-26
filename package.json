@@ -7,14 +7,13 @@
     "start": "astro dev",
     "build": "astro build && node scripts/copy-md-sources.mjs",
     "preview": "astro preview",
-    "astro": "astro",
-    "generate-llms:full": "node scripts/generate-llms.mjs",
-    "generate-llms": "node scripts/generate-llms.mjs && claude --allowedTools Read -p 'Read the file public/llms-full.txt. Generate a summary index following the llms.txt spec format (# Title, > Description, then ## Sections with bullet-point links and one-line descriptions). Only use information present in the source file. Never invent or embellish. Group sections logically. Output ONLY the raw llms.txt content — no introductory text, no commentary, no explanations, no markdown fences. Start directly with the # title line.' > public/llms-raw.txt && node scripts/cleanup-llms-raw.mjs && git rev-parse HEAD > .llms-generation"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.37.6",
     "@pasqal-io/starlight-client-mermaid": "^0.1.0",
     "astro": "^5.6.1",
-    "sharp": "^0.34.2"
+    "sharp": "^0.34.2",
+    "starlight-llms-txt": "^0.7.0"
   }
 }

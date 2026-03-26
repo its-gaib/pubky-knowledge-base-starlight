@@ -1,6 +1,4 @@
 ---
-import fs from "fs";
-
 const commands = [
   { label: "npm", command: "npm install @synonymdev/pubky" },
   { label: "Rust", command: "cargo add pubky" },
@@ -8,24 +6,11 @@ const commands = [
 
 const SITE_URL = (import.meta.env.SITE_URL || "https://docs.pubky.org").replace(/\/+$/, "");
 
-// Approximate token counts (chars/4 is a reasonable estimate for English text)
-function approxTokens(filePath: string): string {
-  try {
-    const { size } = fs.statSync(filePath);
-    const tokens = Math.round(size / 4 / 1000);
-    return `~${tokens}k tokens`;
-  } catch {
-    return "size unknown";
-  }
-}
-const llmsSummaryTokens = approxTokens("public/llms.txt");
-const llmsFullTokens = approxTokens("public/llms-full.txt");
-
 const aiPrompt = `Pubky: open protocol for key-based, censorship-resistant web apps. Public key identity, homeserver storage, Mainline DHT discovery over HTTP/REST.
 
-Fetch the docs that fit your context window and help me build with Pubky:
-- Summary (${llmsSummaryTokens}): ${SITE_URL}/llms.txt
-- Full docs (${llmsFullTokens}): ${SITE_URL}/llms-full.txt`;
+Fetch the docs and help me build with Pubky:
+- Full (~110k tokens): ${SITE_URL}/llms-full.txt
+- Compact (~53k tokens): ${SITE_URL}/llms-small.txt`;
 
 const aiLinks = [
   { name: "Claude", url: `https://claude.ai/new?q=${encodeURIComponent(aiPrompt)}`, icon: "claude" },
