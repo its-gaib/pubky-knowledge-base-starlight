@@ -249,7 +249,7 @@ Organizations can run their own Nexus instance with custom:
 
 ### Public Instances
 The Pubky team operates public instances:
-- **Production**: [https://nexus.pubky.app](https://nexus.pubky.app)
+- **Production**: [https://nexus.pubky.app](https://nexus.pubky.app/swagger-ui/)
 - **Staging**: [https://nexus.staging.pubky.app](https://nexus.staging.pubky.app)
 
 ### Hybrid Approaches
