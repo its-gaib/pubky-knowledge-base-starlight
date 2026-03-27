@@ -7,6 +7,7 @@ import starlightLlmsTxt from 'starlight-llms-txt';
 // https://astro.build/config
 export default defineConfig({
 	site: process.env.SITE_URL || 'https://docs.pubky.org',
+	base: process.env.BASE_PATH || '/',
 	integrations: [
 		starlight({
 			title: '',
