@@ -61,6 +61,7 @@ export default defineConfig({
 						'explore/pubky-apps/reference-app/features/**',
 						'explore/concepts/censorship',
 						'explore/concepts/credible-exit',
+						'resources',
 					],
 				}),
 			],
@@ -93,6 +94,7 @@ export default defineConfig({
 				{ label: 'The Vision of Pubky', slug: 'the-vision-of-pubky' },
 				{ label: 'Comparisons', slug: 'comparisons' },
 				{ label: 'Contributing', slug: 'contributing' },
+				{ label: 'Resources', slug: 'resources' },
 				{ label: 'Troubleshooting', slug: 'troubleshooting' },
 				{
 					label: 'Concepts',
