@@ -76,10 +76,10 @@ After changing any documentation in `src/content/docs/`:
 
 ```bash
 # Generate both files (requires Claude CLI to be installed and authenticated)
-SITE_URL=https://pubky-knowledge-base-starlight.vercel.app npm run generate-llms
+npm run generate-llms
 
 # Or generate only llms-full.txt (no Claude CLI needed)
-SITE_URL=https://pubky-knowledge-base-starlight.vercel.app npm run generate-llms:full
+npm run generate-llms:full
 ```
 
 Review the git diff of the generated files before committing. The `llms.txt` summary is AI-generated and should be checked for accuracy.
