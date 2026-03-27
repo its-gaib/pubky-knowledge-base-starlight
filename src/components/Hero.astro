@@ -2,7 +2,8 @@
 import Default from "@astrojs/starlight/components/Hero.astro";
 import InstallBlock from "./InstallBlock.astro";
 
-const isHomepage = Astro.url.pathname === "/" || Astro.url.pathname === "";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const isHomepage = Astro.url.pathname === base + "/" || Astro.url.pathname === base;
 ---
 
 <div class="hero-gradient-wrap">
