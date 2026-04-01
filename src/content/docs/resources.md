@@ -52,10 +52,6 @@ All under [github.com/pubky](https://github.com/pubky):
 - [pubky-cli](https://github.com/pubky/pubky-cli) — Command-line companion for interacting with Pubky homeservers
 - [atomicity](https://github.com/pubky/atomicity) — Proposal for a P2P credit system
 - [pubky-ai-kit](https://github.com/pubky/pubky-ai-kit) — Context for building with Pubky and AI
-- [pubky-app-ffi](https://github.com/pubky/pubky-app-ffi) — Pubky App FFI bindings
-- [pubky-notes](https://github.com/pubky/pubky-notes) — Note-taking app using Pubky protocol
-- [pubky-4u](https://github.com/pubky/pubky-4u) — Sovereign recommendation engine with Web-of-Trust algorithms
-- [pubky-core-client](https://github.com/pubky/pubky-core-client) — Rust client for connecting to Pubky homeserver
 
 ## Community Projects
 
