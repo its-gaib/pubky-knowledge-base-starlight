@@ -49,6 +49,14 @@ jobs:
         working-directory: snippets/js
         run: npx tsc --noEmit
 
+      - name: Lint (vanilla JS)
+        working-directory: snippets/js
+        run: npx eslint src/
+
+      - name: Format (vanilla JS)
+        working-directory: snippets/js
+        run: npx prettier --check src/
+
       - name: Install (React Native)
         working-directory: snippets/react-native
         run: npm ci --legacy-peer-deps
@@ -56,3 +64,11 @@ jobs:
       - name: Type-check (React Native)
         working-directory: snippets/react-native
         run: npx tsc --noEmit
+
+      - name: Lint (React Native)
+        working-directory: snippets/react-native
+        run: npx eslint src/
+
+      - name: Format (React Native)
+        working-directory: snippets/react-native
+        run: npx prettier --check src/

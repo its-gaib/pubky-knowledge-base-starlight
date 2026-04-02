@@ -10,8 +10,8 @@ import {
   list,
   deleteFile,
   generateSecretKey,
-  getPublicKeyFromSecretKey
-} from '@synonymdev/react-native-pubky';
+  getPublicKeyFromSecretKey,
+} from "@synonymdev/react-native-pubky";
 
 // All methods return Result type
 const result = await signUp(secretKey, homeserverUrl);

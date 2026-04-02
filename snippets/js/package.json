@@ -6,6 +6,10 @@
     "@synonymdev/pubky": "0.7.0"
   },
   "devDependencies": {
-    "typescript": "^5.8.0"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.58.0"
   }
 }
