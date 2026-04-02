@@ -66,11 +66,5 @@ cargo run -p pubky-testnet --features embedded-postgres
 
 The examples use embedded Postgres by default. For programmatic use:
 
-```rust
-use pubky_testnet::EphemeralTestnetBuilder;
-
-let testnet = EphemeralTestnetBuilder::new()
-    .with_embedded_postgres()
-    .build()
-    .await?;
+```rust snippet="snippets/rust/src/lib.rs:testnet_embedded"
 ```
