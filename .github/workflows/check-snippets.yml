@@ -43,7 +43,7 @@ jobs:
 
       - name: Install (vanilla JS)
         working-directory: snippets/js
-        run: npm ci
+        run: npm install
 
       - name: Type-check (vanilla JS)
         working-directory: snippets/js
@@ -59,7 +59,7 @@ jobs:
 
       - name: Install (React Native)
         working-directory: snippets/react-native
-        run: npm ci --legacy-peer-deps
+        run: npm install --legacy-peer-deps
 
       - name: Type-check (React Native)
         working-directory: snippets/react-native
