@@ -10,7 +10,7 @@ jobs:
     name: Rust snippets
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: dtolnay/rust-toolchain@stable
         with:
@@ -22,10 +22,6 @@ jobs:
 
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get install -y pkg-config libssl-dev
-
-      - name: Check
-        working-directory: snippets/rust
-        run: cargo check
 
       - name: Clippy
         working-directory: snippets/rust
