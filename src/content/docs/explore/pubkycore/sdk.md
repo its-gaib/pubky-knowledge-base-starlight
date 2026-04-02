@@ -123,10 +123,7 @@ Data is organized in a hierarchical namespace:
 ```
 
 **JavaScript:**
-```javascript
-import { Pubky } from '@synonymdev/pubky';
-
-const pubky = new Pubky();
+```javascript snippet="snippets/js/src/init-client.ts:js_init_client"
 ```
 
 ### Sign Up (Create Account on Homeserver)
@@ -138,9 +135,7 @@ For gated homeservers, obtain a signup token via [Homegate](/explore/technologie
 ```
 
 **JavaScript:**
-```javascript
-const signer = pubky.signer(keypair);
-const session = await signer.signup(homeserverPk, signupToken);
+```javascript snippet="snippets/js/src/sdk.ts:js_signup"
 ```
 
 ### Sign In (Existing User)
@@ -150,9 +145,7 @@ const session = await signer.signup(homeserverPk, signupToken);
 ```
 
 **JavaScript:**
-```javascript
-const signer = pubky.signer(keypair);
-const session = await signer.signin();
+```javascript snippet="snippets/js/src/sdk.ts:js_signin"
 ```
 
 ### Store Data (PUT)
@@ -162,8 +155,7 @@ const session = await signer.signin();
 ```
 
 **JavaScript:**
-```javascript
-await session.storage.putJson("/pub/myapp/profile", profile);
+```javascript snippet="snippets/js/src/sdk.ts:js_put"
 ```
 
 ### Retrieve Data (GET)
@@ -173,8 +165,7 @@ await session.storage.putJson("/pub/myapp/profile", profile);
 ```
 
 **JavaScript:**
-```javascript
-const profile = await session.storage.getJson("/pub/myapp/profile");
+```javascript snippet="snippets/js/src/sdk.ts:js_get"
 ```
 
 ### Delete Data (DELETE)
@@ -184,8 +175,7 @@ const profile = await session.storage.getJson("/pub/myapp/profile");
 ```
 
 **JavaScript:**
-```javascript
-await session.storage.delete("/pub/myapp/profile");
+```javascript snippet="snippets/js/src/sdk.ts:js_delete"
 ```
 
 ### List Data (Pagination)
@@ -195,12 +185,7 @@ await session.storage.delete("/pub/myapp/profile");
 ```
 
 **JavaScript:**
-```javascript
-const entries = await session.storage.list("/pub/myapp/posts/", null, false, 20);
-
-for (const url of entries) {
-    console.log(url);
-}
+```javascript snippet="snippets/js/src/sdk.ts:js_list"
 ```
 
 ### Public Read (Unauthenticated)
@@ -212,9 +197,7 @@ Read another user's public data without a session:
 ```
 
 **JavaScript:**
-```javascript
-const text = await pubky.publicStorage
-    .getText(`${userPk}/pub/myapp/profile`);
+```javascript snippet="snippets/js/src/sdk.ts:js_public_read"
 ```
 
 ## Authentication Flows
@@ -234,152 +217,32 @@ The React Native SDK (`@synonymdev/react-native-pubky`) provides the same API as
 
 ### Basic Usage
 
-```typescript
-import {
-  signUp,
-  signIn,
-  put,
-  get,
-  list,
-  deleteFile,
-  generateSecretKey,
-  getPublicKeyFromSecretKey
-} from '@synonymdev/react-native-pubky';
-
-// All methods return Result type
-const result = await signUp(secretKey, homeserverUrl);
-if (result.isErr()) {
-  console.error(result.error.message);
-  return;
-}
-console.log(result.value); // Success value
+```typescript snippet="snippets/react-native/src/basic-usage.ts:rn_basic_usage"
 ```
 
 ### Sign Up & Authentication
 
-```typescript
-import { signUp, signIn, session, getHomeserver } from '@synonymdev/react-native-pubky';
-
-// Standard signup
-const signUpRes = await signUp(
-  secretKey,
-  'pubky://8pinxxgqs41n4aididenw5apqp1urfmzdztr8jt4abrkdn435ewo'
-);
-
-// Signup with token (for gated homeservers)
-const signUpWithTokenRes = await signUp(
-  secretKey,
-  'pubky://8pinxxgqs41n4aididenw5apqp1urfmzdztr8jt4abrkdn435ewo',
-  'your_signup_token'
-);
-
-// Sign in
-const signInRes = await signIn(secretKey);
-
-// Check session
-const sessionRes = await session(publicKey);
-
-// Get homeserver
-const homeserverRes = await getHomeserver(publicKey);
+```typescript snippet="snippets/react-native/src/auth.ts:rn_auth"
 ```
 
 ### Data Operations
 
-```typescript
-import { put, get, list, deleteFile } from '@synonymdev/react-native-pubky';
-
-// Write data
-const putRes = await put(
-  'pubky://z4e8s17cou9qmuwen8p1556jzhf1wktmzo6ijsfnri9c4hnrdfty/pub/profile.json',
-  { data: JSON.stringify({ name: 'Alice', bio: 'Builder' }) }
-);
-
-// Read data
-const getRes = await get(
-  'pubky://z4e8s17cou9qmuwen8p1556jzhf1wktmzo6ijsfnri9c4hnrdfty/pub/profile.json'
-);
-
-// List directory
-const listRes = await list(
-  'pubky://z4e8s17cou9qmuwen8p1556jzhf1wktmzo6ijsfnri9c4hnrdfty/pub/posts/'
-);
-
-// Delete file
-const deleteRes = await deleteFile(
-  'pubky://z4e8s17cou9qmuwen8p1556jzhf1wktmzo6ijsfnri9c4hnrdfty/pub/old-post'
-);
+```typescript snippet="snippets/react-native/src/data-ops.ts:rn_data_ops"
 ```
 
 ### Key Management
 
-```typescript
-import { 
-  generateSecretKey, 
-  getPublicKeyFromSecretKey,
-  createRecoveryFile,
-  decryptRecoveryFile
-} from '@synonymdev/react-native-pubky';
-
-// Generate new key pair
-const keyRes = await generateSecretKey();
-const secretKey = keyRes.value;
-
-// Derive public key
-const pubKeyRes = await getPublicKeyFromSecretKey(secretKey);
-const publicKey = pubKeyRes.value;
-
-// Create encrypted recovery file
-const recoveryRes = await createRecoveryFile(secretKey, 'passphrase');
-const recoveryFile = recoveryRes.value; // Base64 encoded
-
-// Decrypt recovery file
-const decryptRes = await decryptRecoveryFile(recoveryFile, 'passphrase');
-const recoveredKey = decryptRes.value;
+```typescript snippet="snippets/react-native/src/key-management.ts:rn_key_management"
 ```
 
 ### HTTPS Resolution
 
-```typescript
-import { resolveHttps } from '@synonymdev/react-native-pubky';
-
-// Resolve public key to HTTPS URL
-const resolveRes = await resolveHttps(
-  'z4e8s17cou9qmuwen8p1556jzhf1wktmzo6ijsfnri9c4hnrdfty'
-);
-
-if (resolveRes.isOk()) {
-  console.log(`HTTPS URL: ${resolveRes.value}`);
-}
+```typescript snippet="snippets/react-native/src/resolve.ts:rn_resolve"
 ```
 
 ### Example: Complete Social Profile
 
-```typescript
-import { signUp, put, get } from '@synonymdev/react-native-pubky';
-
-// Sign up
-const signUpRes = await signUp(secretKey, homeserverUrl);
-if (signUpRes.isErr()) throw new Error(signUpRes.error.message);
-
-// Create profile (following pubky-app-specs)
-const profile = {
-  name: 'Alice',
-  bio: 'Building on Pubky',
-  image: 'pubky://alice-pubkey/pub/profile.jpg',
-  links: [
-    { title: 'Website', url: 'https://alice.com' }
-  ]
-};
-
-// Write profile
-const putRes = await put(
-  'pubky://alice-pubkey/pub/pubky.app/profile.json',
-  { data: JSON.stringify(profile) }
-);
-
-// Read profile
-const getRes = await get('pubky://alice-pubkey/pub/pubky.app/profile.json');
-const savedProfile = JSON.parse(getRes.value);
+```typescript snippet="snippets/react-native/src/social-profile.ts:rn_social_profile"
 ```
 
 ### Repository & Documentation
@@ -392,35 +255,7 @@ const savedProfile = JSON.parse(getRes.value);
 
 ### Simple Profile Storage
 
-```javascript
-import { Pubky, Keypair } from '@synonymdev/pubky';
-
-async function storeProfile() {
-    const pubky = new Pubky();
-    const keypair = Keypair.random();
-    const signer = pubky.signer(keypair);
-
-    // Sign up at a homeserver (null token for open/testnet homeservers)
-    const session = await signer.signup(homeserverPk, signupToken);
-    console.log(`Public Key: ${signer.publicKey.z32()}`);
-
-    // Store profile (following pubky-app-specs format)
-    const profile = {
-        name: "Alice",
-        bio: "Building on Pubky",
-        image: "pubky://user_id/pub/pubky.app/files/0000000000000",
-        links: [{ title: "GitHub", url: "https://github.com/alice" }],
-        status: "Exploring decentralized tech."
-    };
-
-    // Store at standard pubky-app location
-    await session.storage.putJson("/pub/pubky.app/profile.json", profile);
-    console.log("Profile stored!");
-
-    // Retrieve profile
-    const retrieved = await session.storage.getJson("/pub/pubky.app/profile.json");
-    console.log("Retrieved:", retrieved);
-}
+```javascript snippet="snippets/js/src/profile-storage.ts:js_profile_storage"
 ```
 
 **Note**: This example follows the [pubky-app-specs](https://github.com/pubky/pubky-app-specs) data model specification for interoperability with Pubky App ecosystem.
@@ -470,12 +305,7 @@ cargo run --bin pubky-testnet
 Then connect your app to `http://localhost:15411`.
 
 **JavaScript:**
-```javascript
-import { Pubky } from '@synonymdev/pubky';
-
-const pubky = await Pubky.create({
-    homeserverUrl: 'http://localhost:15411'
-});
+```javascript snippet="snippets/js/src/testnet-client.ts:js_testnet_client"
 ```
 
 ### Unit Tests
@@ -508,19 +338,7 @@ The SDK provides a builder API for subscribing to real-time homeserver events vi
 ```
 
 **JavaScript:**
-```javascript
-const user = PublicKey.from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo");
-
-const stream = await pubky.eventStreamForUser(user, null)
-    .live()
-    .subscribe();
-
-for await (const event of stream) {
-    console.log(`${event.eventType}: ${event.resource.path}`);
-    // event.eventType: "PUT" or "DEL"
-    // event.cursor: string (for pagination/resumption)
-    // event.contentHash: base64 string (PUT only) or undefined
-}
+```javascript snippet="snippets/js/src/sdk.ts:js_events"
 ```
 
 **Builder options:**
@@ -589,14 +407,7 @@ client.put(
 ```
 
 **JavaScript:**
-```javascript
-try {
-    const text = await session.storage.getText("/pub/myapp/data");
-    console.log("Retrieved:", text);
-} catch (error) {
-    // error.name: "RequestError", "AuthenticationError", "ValidationError", etc.
-    console.error(`${error.name}: ${error.message}`);
-}
+```javascript snippet="snippets/js/src/sdk.ts:js_error_handling"
 ```
 
 ## Best Practices

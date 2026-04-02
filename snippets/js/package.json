@@ -1,0 +1,11 @@
+{
+  "name": "pubky-doc-snippets-js",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@synonymdev/pubky": "0.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "pubky-doc-snippets-react-native",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@synonymdev/react-native-pubky": "0.11.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "react-native": "^0.78.0",
+    "typescript": "^5.8.0"
+  }
+}
