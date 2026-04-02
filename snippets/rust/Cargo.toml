@@ -17,3 +17,7 @@ openssl = { version = "0.10", features = ["vendored"] }
 [features]
 default = []
 testnet = ["dep:pubky-testnet"]
+
+[lints.clippy]
+pedantic = { level = "allow", priority = -1 }
+all = { level = "warn", priority = -1 }

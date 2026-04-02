@@ -1,4 +1,10 @@
-#![allow(unused_imports, unused_variables, dead_code, unused_must_use, unreachable_code)]
+#![allow(
+    unused_imports,
+    unused_variables,
+    dead_code,
+    unused_must_use,
+    unreachable_code
+)]
 
 // =============================================================================
 // Snippets from: src/content/docs/explore/pubkycore/sdk.md
@@ -16,11 +22,12 @@ async fn snippet_init_client() -> anyhow::Result<()> {
 async fn snippet_signup() -> anyhow::Result<()> {
     let signup_token: Option<String> = None;
     // --8<-- [start:signup]
-    use pubky::{Pubky, Keypair, PublicKey};
+    use pubky::{Keypair, Pubky, PublicKey};
 
     let pubky = Pubky::new()?;
     let keypair = Keypair::random();
-    let homeserver = PublicKey::try_from("8pinxxgqs41n4aididenw5apqp1urfmzdztr8jt4abrkdn435ewo").unwrap();
+    let homeserver =
+        PublicKey::try_from("8pinxxgqs41n4aididenw5apqp1urfmzdztr8jt4abrkdn435ewo").unwrap();
 
     let signer = pubky.signer(keypair);
     let session = signer.signup(&homeserver, signup_token.as_deref()).await?;
@@ -29,7 +36,7 @@ async fn snippet_signup() -> anyhow::Result<()> {
 }
 
 async fn snippet_signin() -> anyhow::Result<()> {
-    use pubky::{Pubky, Keypair};
+    use pubky::{Keypair, Pubky};
     let pubky = Pubky::new()?;
     let keypair = Keypair::random();
     // --8<-- [start:signin]
@@ -40,21 +47,21 @@ async fn snippet_signin() -> anyhow::Result<()> {
 }
 
 async fn snippet_put() -> anyhow::Result<()> {
-    use pubky::{Pubky, Keypair};
+    use pubky::{Keypair, Pubky};
     let pubky = Pubky::new()?;
     let session = pubky.signer(Keypair::random()).signin().await?;
     let profile = serde_json::json!({"name": "Alice"});
     // --8<-- [start:put]
-    session.storage().put(
-        "/pub/myapp/profile",
-        serde_json::to_string(&profile)?
-    ).await?;
+    session
+        .storage()
+        .put("/pub/myapp/profile", serde_json::to_string(&profile)?)
+        .await?;
     // --8<-- [end:put]
     Ok(())
 }
 
 async fn snippet_get() -> anyhow::Result<()> {
-    use pubky::{Pubky, Keypair};
+    use pubky::{Keypair, Pubky};
     let pubky = Pubky::new()?;
     let session = pubky.signer(Keypair::random()).signin().await?;
     // --8<-- [start:get]
@@ -65,7 +72,7 @@ async fn snippet_get() -> anyhow::Result<()> {
 }
 
 async fn snippet_delete() -> anyhow::Result<()> {
-    use pubky::{Pubky, Keypair};
+    use pubky::{Keypair, Pubky};
     let pubky = Pubky::new()?;
     let session = pubky.signer(Keypair::random()).signin().await?;
     // --8<-- [start:delete]
@@ -75,11 +82,13 @@ async fn snippet_delete() -> anyhow::Result<()> {
 }
 
 async fn snippet_list() -> anyhow::Result<()> {
-    use pubky::{Pubky, Keypair};
+    use pubky::{Keypair, Pubky};
     let pubky = Pubky::new()?;
     let session = pubky.signer(Keypair::random()).signin().await?;
     // --8<-- [start:list]
-    let entries = session.storage().list("/pub/myapp/posts/")?
+    let entries = session
+        .storage()
+        .list("/pub/myapp/posts/")?
         .limit(20)
         .reverse(true)
         .send()
@@ -97,7 +106,8 @@ async fn snippet_public_read() -> anyhow::Result<()> {
     let pubky = Pubky::new()?;
     let user_public_key = "o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo";
     // --8<-- [start:public_read]
-    let resp = pubky.public_storage()
+    let resp = pubky
+        .public_storage()
         .get(format!("{}/pub/myapp/profile", user_public_key))
         .await?;
     let text = resp.text().await?;
@@ -107,7 +117,7 @@ async fn snippet_public_read() -> anyhow::Result<()> {
 
 async fn snippet_auth_flow() -> anyhow::Result<()> {
     // --8<-- [start:auth_flow]
-    use pubky::{Pubky, Capabilities, AuthFlowKind};
+    use pubky::{AuthFlowKind, Capabilities, Pubky};
 
     let pubky = Pubky::new()?;
     let caps = Capabilities::default();
@@ -123,7 +133,7 @@ async fn snippet_auth_flow() -> anyhow::Result<()> {
 // so it lives in its own module.
 mod social_feed {
     // --8<-- [start:social_feed]
-    use pubky::{Pubky, Keypair, PubkySession, PubkyResource};
+    use pubky::{Keypair, Pubky, PubkyResource, PubkySession};
     use serde::{Deserialize, Serialize};
 
     #[derive(Serialize, Deserialize)]
@@ -137,14 +147,18 @@ mod social_feed {
         let post_id = post.timestamp.to_string();
         let path = format!("/pub/social/posts/{}", post_id);
 
-        session.storage().put(&path, serde_json::to_string(post)?).await?;
+        session
+            .storage()
+            .put(&path, serde_json::to_string(post)?)
+            .await?;
         Ok(())
     }
 
     async fn get_feed(pubky: &Pubky, public_key: &str) -> anyhow::Result<Vec<Post>> {
         let path = format!("{}/pub/social/posts/", public_key);
 
-        let entries: Vec<PubkyResource> = pubky.public_storage()
+        let entries: Vec<PubkyResource> = pubky
+            .public_storage()
             .list(path)?
             .limit(50)
             .reverse(true)
@@ -165,20 +179,24 @@ mod social_feed {
 
 async fn snippet_events_single_user() -> anyhow::Result<()> {
     // --8<-- [start:events_single_user]
-    use pubky::{Pubky, PublicKey, EventType};
     use futures_util::StreamExt;
+    use pubky::{EventType, Pubky, PublicKey};
 
     let pubky = Pubky::new()?;
     let user = PublicKey::try_from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo").unwrap();
 
-    let mut stream = pubky.event_stream_for_user(&user, None)
+    let mut stream = pubky
+        .event_stream_for_user(&user, None)
         .live()
         .subscribe()
         .await?;
 
     while let Some(result) = stream.next().await {
         let event = result?;
-        println!("{}: {} (cursor: {})", event.event_type, event.resource, event.cursor);
+        println!(
+            "{}: {} (cursor: {})",
+            event.event_type, event.resource, event.cursor
+        );
     }
     // --8<-- [end:events_single_user]
     Ok(())
@@ -186,16 +204,19 @@ async fn snippet_events_single_user() -> anyhow::Result<()> {
 
 async fn snippet_events_multi_user() -> anyhow::Result<()> {
     // --8<-- [start:events_multi_user]
-    use pubky::{Pubky, PublicKey, EventCursor};
     use futures_util::StreamExt;
+    use pubky::{EventCursor, Pubky, PublicKey};
 
     let pubky = Pubky::new()?;
-    let user1 = PublicKey::try_from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo").unwrap();
-    let user2 = PublicKey::try_from("pxnu33x7jtpx9ar1ytsi4yxbp6a5o36gwhffs8zoxmbuptici1jy").unwrap();
+    let user1 =
+        PublicKey::try_from("o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo").unwrap();
+    let user2 =
+        PublicKey::try_from("pxnu33x7jtpx9ar1ytsi4yxbp6a5o36gwhffs8zoxmbuptici1jy").unwrap();
 
     let homeserver = pubky.get_homeserver_of(&user1).await.unwrap();
 
-    let mut stream = pubky.event_stream_for(&homeserver)
+    let mut stream = pubky
+        .event_stream_for(&homeserver)
         .add_users([(&user1, None), (&user2, Some(EventCursor::new(100)))])?
         .live()
         .limit(100)
@@ -213,7 +234,7 @@ async fn snippet_events_multi_user() -> anyhow::Result<()> {
 
 async fn snippet_session_management() -> anyhow::Result<()> {
     // --8<-- [start:session_management]
-    use pubky::{Pubky, Keypair};
+    use pubky::{Keypair, Pubky};
 
     let pubky = Pubky::new()?;
     let signer = pubky.signer(Keypair::random());
@@ -231,7 +252,7 @@ async fn snippet_session_management() -> anyhow::Result<()> {
 }
 
 async fn snippet_multi_identity() -> anyhow::Result<()> {
-    use pubky::{Pubky, Keypair};
+    use pubky::{Keypair, Pubky};
     let keypair_1 = Keypair::random();
     let keypair_2 = Keypair::random();
     // --8<-- [start:multi_identity]
@@ -246,7 +267,7 @@ async fn snippet_multi_identity() -> anyhow::Result<()> {
 }
 
 async fn snippet_error_handling() -> anyhow::Result<()> {
-    use pubky::{Pubky, Keypair};
+    use pubky::{Keypair, Pubky};
     let pubky = Pubky::new()?;
     let session = pubky.signer(Keypair::random()).signin().await?;
     // --8<-- [start:error_handling]

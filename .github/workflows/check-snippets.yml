@@ -13,6 +13,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
 
       - uses: Swatinem/rust-cache@v2
         with:
@@ -21,6 +23,14 @@ jobs:
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get install -y pkg-config libssl-dev
 
-      - name: cargo check
+      - name: Check
         working-directory: snippets/rust
         run: cargo check
+
+      - name: Clippy
+        working-directory: snippets/rust
+        run: cargo clippy -- -D warnings
+
+      - name: Format
+        working-directory: snippets/rust
+        run: cargo fmt --check
