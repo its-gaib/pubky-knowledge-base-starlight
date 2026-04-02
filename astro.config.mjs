@@ -3,11 +3,15 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightClientMermaid from '@pasqal-io/starlight-client-mermaid';
 import starlightLlmsTxt from 'starlight-llms-txt';
+import remarkSnippet from './plugins/remark-snippet.mjs';
 
 // https://astro.build/config
 export default defineConfig({
 	site: process.env.SITE_URL || 'https://docs.pubky.org',
 	base: process.env.BASE_PATH || '/',
+	markdown: {
+		remarkPlugins: [remarkSnippet],
+	},
 	integrations: [
 		starlight({
 			title: '',
