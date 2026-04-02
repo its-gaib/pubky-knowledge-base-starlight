@@ -24,5 +24,11 @@ pnpm-debug.log*
 snippets/rust/target/
 snippets/rust/Cargo.lock
 
+# JS/TS snippet artifacts
+snippets/js/node_modules/
+snippets/js/package-lock.json
+snippets/react-native/node_modules/
+snippets/react-native/package-lock.json
+
 # llms generation intermediate files
 public/llms-raw.txt
